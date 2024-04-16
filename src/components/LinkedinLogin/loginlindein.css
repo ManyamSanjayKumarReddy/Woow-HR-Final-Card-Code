@@ -1,0 +1,138 @@
+.loginformcontainer1{
+  background: url('../../../public/images/Untitled design.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo_img {
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.loginform1 {
+  margin-top:10rem;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+               
+}
+
+.loginform1:hover{
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+  }
+  
+  
+.loginform1 div label {
+    display: block;
+    font-weight: bold;
+    color: #000b12;
+    margin-bottom: 2px;
+  }
+  
+.loginform1 div input {
+  width: 100%;
+  padding: 10px 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 10px;
+  }
+  
+ .loginform1 div span {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+  }
+
+.loginform1  button {
+    background-color:  #119bbe;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition:background-color 0.3s;
+  }
+  
+ .loginform1 button:hover {
+    background-color: #ffffff;
+    color: #000b12;
+  }
+
+ .loginform1 .buttonlogin:hover{
+    color: rgb(255, 255, 255);
+  }
+
+  .h1login{
+    color: #000b12;
+  }
+
+  .submit1{
+   
+    color: #000000;
+    font-weight: 700;
+    border-bottom: 40px;
+    border-radius: 5px;
+  }
+
+
+  .url-style1{
+    border: 1px solid white;
+  }
+  .name-style{
+    border: 1px solid white;
+  }
+  
+  @media (max-width:950px) {
+    
+    .loginformcontainer1 {
+       background-image: url('../../../public/images/Untitled design.png');
+       background-repeat: no-repeat;
+       background-size:150%; 
+
+   }
+  
+    .loginform1 {
+      margin-top:30em;
+      margin-bottom:5em;
+      font-size: 15px; 
+      
+    }
+    
+     .logo_img {
+      width: 300px;
+      padding-right:-60px;
+      font-size: x-small;
+    }
+    
+  }
+
+
+  @media (max-width:600px) {
+    
+    .loginformcontainer1 {
+       background-image: url('../../../public/images/Untitled design.png');
+       background-repeat: no-repeat;
+       background-size:150%; 
+      
+   }
+  
+    .loginform1 {
+     width: 240px;
+      margin-bottom: 10rem;
+      font-size: 15px; 
+      position: absolute;
+      top: -150px;
+    }
+    
+     .logo_img {
+      width: 300px;
+      padding-right:-60px;
+      font-size: x-small;
+    }
+    
+  }

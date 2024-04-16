@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+}
+.App{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.certificatecontainer{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.rightcontainer button{
+    margin-top:15px;
+    margin-left:4rem;
+    padding:15px 20px;
+    background: blue;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+
+
+.rightcontainer button:hover{
+    scale: 1.1;
+    background: rgb(0, 153, 255);
+    cursor: pointer;
+}
+
+.leftcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.certificate{
+    height: 520px;
+    width: 950px;
+    border-radius: 20px;
+    background: url(../public/images/bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.ribbon{
+    position: relative;
+    top: 15px;
+    left: 400px;
+    height: 50px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 370px;
+    left: 600px;
+}
+.links a{
+    color: white;
+    font-size: 30px;
+}
+.socialmedia{
+    display: flex;
+    height: fit-content;
+    gap: 10px;
+}
+.socialmedia h2{
+    color: white;
+    margin: 0;
+}
+.socialmedia .icons{
+    display: flex;
+    background: white;
+    gap:5px;
+    height: 38px;
+    padding: 0px 5px;
+}
+.namecontainer{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0px;
+    gap: 10px;
+    left: 300px;
+}
+.namecontainer .name{
+    height: 40px;
+    width: 400px;
+    border: none;
+    font-size: 28px;
+    background: transparent;
+    border-bottom: 2px solid black;
+}
+.namecontainer p{
+    border: none;
+    font-size: 16px;
+    background: transparent;
+    margin: 0px;
+}
+.linkedin{
+    height: 50px;
+    width: 300px;
+    border: none;
+    font-size: 16px;
+}
+.dpcontainer{
+    position: relative;
+    height: 250px;
+    width: 200px;
+    top: -200px;
+    left: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+.dpcontainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
