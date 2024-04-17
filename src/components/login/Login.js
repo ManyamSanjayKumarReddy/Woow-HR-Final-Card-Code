@@ -56,71 +56,80 @@ function Login() {
 
             <div className='row'>
 
-                <div className='col-md-7'>
-                    <img src={logo} alt='Logo'className='logo_img col-6 col-md-4'/>
+                <div className='col-lg-6 col-md-4'>
+                    <img src={logo} alt='Logo'className='logo_img col-6 col-md-12 col-lg-4'/>
                 </div>    
         
             
-                <div className='col-md-4'>
-                    <form className='loginform1 col-12 col-md-12 col-sm-m-5' onSubmit={handleSubmit} style={{ borderRadius: '10px' }}>
-                    
-                        <div>
-                            <h3 className='h1login'>Get Started with WoW HR</h3>
-                            <label>NAME:</label>
-                            <input
-                                className='name-style'
-                                type="text"
-                                name="instituteName"
-                                placeholder="Enter your Name"
-                                autoComplete="off"
-                                onChange={(e) => {
-                                    authcontext.setName(e.target.value);
-                                }}
-                            />
-                            {errors.name && <span className="error">{errors.name}</span>}
-                        </div>
-                        
-                        <div  style={{ marginTop: '20px', marginBottom: '20px' }}> 
-                            <label>DESIGNATION:</label>
-                            <input
-                                className='designation-style'
-                                type="text"
-                                name="designation"
-                                placeholder="Enter your Designation"
-                                autoComplete="off"
-                                onChange={(e) => {
-                                    authcontext.setdesignation(e.target.value);
-                                }}
-                            />
-                            {errors.designation && <span className="error">{errors.designation}</span>}
-                        </div>
-                        <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-                            <label>UPLOAD IMAGE:</label>
-                            <input
-                                id="imageInput"
-                                type="file"
-                                accept="image/*"
-                                style={{ display: 'none' }}
-                                onChange={handleImageChange}
-                            />
-                            <div
-                                className="image-drop"
-                                onClick={() => document.getElementById('imageInput').click()}
-                                onDrop={(e) => {
-                                    e.preventDefault();
-                                    handleImageChange(e);
-                                }}
-                                onDragOver={(e) => e.preventDefault()}
-                            >
-                                {authcontext.dp ? (
-                                    <p className='image_text'>Image uploaded</p> // Message indicating image uploaded
-                                ) : (
-                                    <p className='image_text'>UPLOAD IMAGE HERE</p>
-                                )}
+                <div className='col-lg-5 col-md-12 '>
+                    <div className='card_design'>
+                        <form onSubmit={handleSubmit}>
+    
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <h3 className='h1login'>Get Started with WoW HR</h3>
+                                <label>NAME:</label>
+                                <input
+                                    className='name-style'
+                                    type="text"
+                                    name="instituteName"
+                                    placeholder="Enter your Name"
+                                    autoComplete="off"
+                                    onChange={(e) => {
+                                        authcontext.setName(e.target.value);
+                                    }}
+                                />
+                                {errors.name && <span className="error">{errors.name}</span>}
                             </div>
-                        </div>
-                        <button className='submit' type="submit">Get Started</button>
-                    </form>
+
+                            
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <label>DESIGNATION:</label>
+                                <input
+                                    className='designation-style'
+                                    type="text"
+                                    name="designation"
+                                    placeholder="Enter your Designation"
+                                    autoComplete="off"
+                                    onChange={(e) => {
+                                        authcontext.setdesignation(e.target.value);
+                                    }}
+                                />
+                                {errors.designation && <span className="error">{errors.designation}</span>}
+                            </div>
+
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <label>UPLOAD IMAGE:</label>
+                                <input
+                                    id="imageInput"
+                                    type="file"
+                                    accept="image/*"
+                                    style={{ display: 'none' }}
+                                    onChange={handleImageChange}
+                                />
+                                <div
+                                    className="image-drop"
+                                    onClick={() => document.getElementById('imageInput').click()}
+                                    onDrop={(e) => {
+                                        e.preventDefault();
+                                        handleImageChange(e);
+                                    }}
+                                    onDragOver={(e) => e.preventDefault()}
+                                >
+                                    {authcontext.dp ? (
+                                        <p className='image_text'>Image uploaded</p> // Message indicating image uploaded
+                                    ) : (
+                                        <p className='image_text'>UPLOAD IMAGE HERE</p>
+                                    )}
+                                </div>
+                            </div>
+
+                            <button type="submit" cassName=" submit  mb-4">Get Started</button>
+
+
+                            <div class="text-center">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

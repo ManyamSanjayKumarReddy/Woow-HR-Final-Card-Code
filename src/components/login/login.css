@@ -4,162 +4,145 @@
   background-repeat: no-repeat;
 }
 
-.logo_img {
-  margin-top: 2rem;
-  margin-left: 5rem;
-}
 
-.loginform1 {
+.card_design{
   margin-top:10rem;
   padding: 20px;
   background-color: white;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 10px;
-               
 }
 
-.loginform1:hover{
+.card_design:hover{
   transform: scale(1.05);
   transition: 1s ease-in-out;
-  }
+}
+
+.card_design div label {
+  display: block;
+  font-weight: bold;
+  color: #000b12;
+  margin-bottom: 2px;
+}
+
   
-  
-.loginform1 div label {
-    display: block;
-    font-weight: bold;
-    color: #000b12;
-    margin-bottom: 2px;
-  }
-  
-.loginform1 div input {
+.card_design div input {
   width: 100%;
   padding: 10px 0px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
   padding-left: 10px;
-  }
-  
- .loginform1 div span {
-    color: #e74c3c;
-    font-size: 14px;
-    margin-top: 5px;
-    display: block;
-  }
+}
 
-  .image_text {
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .loginform1 button {
-    background-color: #2bbee3;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition:background-color 0.3s;
-  }
-  
- .loginform1 button:hover {
-    background-color: #ffffff;
-    color: #000b12;
-  }
+.card_design div span {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 5px;
+  display: block;
+}
 
- .loginform1 .buttonlogin:hover{
-    color: rgb(255, 255, 255);
-  }
+.image_text {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+}
 
-  .h1login {
-    color: #000b12;
-  }
-  
-  .submit {
-    color: #000000;
-    font-weight: 700;
-    border-bottom: 40px;
-    border-radius: 5px;
-  }
-  
-  .designation-style {
-    border: 1px solid white;
-  }
-  
-  .image-style {
-    border: 1px solid white;
-  }
-  
-  .url-style {
-    border: 1px solid white;
-  }
-  
-  .name-style {
-    border: 1px solid white;
-  }
-  
-  .image-drop {
-    border-radius: 10px;
-    background-color: #2bbee3;
-  }
-  
-  @media (max-width:950px) {
-    
-    .loginformcontainer1 {
-       background-image: url('../../../public/images/Untitled design.png');
-       background-repeat: no-repeat;
-       background-size:150%; 
+.card_design button {
+  background-color: #2bbee3;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:background-color 0.3s;
+}
 
-   }
-  
-    .loginform1 {
-      margin-top:30em;
-      margin-bottom:5em;
-      font-size: 15px; 
-      
-    }
-    
-     .logo_img {
-      width: 300px;
-      padding-right:-60px;
-      font-size: x-small;
-    }
+.card_design button:hover {
+  background-color: #ffffff;
+  color: #000b12;
+}
+
+
+.h1login {
+  color: #000b12;
+}
+
+.submit{
+  color: #000000;
+  font-weight:800;
+  border-bottom:40px;
+  border-radius: 5px;
+}
+
+.designation-style {
+  border: 1px solid white;
+}
+
+.image-style {
+  border: 1px solid white;
+}
+
+.url-style {
+  border: 1px solid white;
+}
+
+.name-style {
+  border: 1px solid white;
+}
+
+.image-drop {
+  border-radius: 10px;
+  background-color: #2bbee3;
+}
+
+@media (max-width:900px) {
+  .card_design{
+    margin:1rem;
+    margin-top:43em;
+    margin-bottom:5em;
+    font-size:15px; 
     
   }
+}
 
-
-  @media (max-width:600px) {
+@media (max-width:800px) {
+  .card_design{
+    margin:1rem;
+    margin-top:40em;
+    margin-bottom:5em;
+    font-size:15px; 
     
-    .loginformcontainer1 {
-       background-image: url('../../../public/images/Untitled design.png');
-       background-repeat: no-repeat;
-       background-size:150%; 
-
-   }
-  
-    .loginform1 {
-      width: 500px;
-      margin-top:30em;
-      margin-bottom: 5em;
-      
-      font-size: 13px; 
-      position: absolute;
-      top: -70px;
-      left: 1px;
-    }
-    
-     .logo_img {
-      width: 300px;
-      padding-right:-60px;
-      font-size: x-small;
-    }
-    .icons{
-      font-size: 10px;
-    }
-    .linksssr{
-      margin-bottom: 10px;
-    }
   }
+}
+@media (max-width:700px) {
+  .card_design{
+    margin:1rem;
+    margin-top:30em;
+    margin-bottom:5em;
+    font-size:15px; 
+    
+  }
+}
+
+@media (max-width:576px) {
+  .card_design{
+    margin:1rem;
+    margin-top:25em;
+    margin-bottom:5em;
+    font-size: 15px; 
+    
+  }
+}
+
+@media (max-width:476px) {
+  .card_design{
+    margin:1rem;
+    margin-top:20em;
+    margin-bottom:5em;
+    font-size: 15px; 
+    
+  }
+}
