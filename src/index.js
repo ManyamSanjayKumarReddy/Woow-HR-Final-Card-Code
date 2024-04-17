@@ -12,6 +12,7 @@ root.render(
   <AuthContextProvider>
   <BrowserRouter>
     <App />
+    <Analytics />
   </BrowserRouter>
   </AuthContextProvider>
 );
