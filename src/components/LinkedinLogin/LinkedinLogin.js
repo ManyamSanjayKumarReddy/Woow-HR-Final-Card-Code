@@ -97,7 +97,7 @@ function LinkedinLogin() {
                                     className='url-style1'
                                     type="text"
                                     name="website"
-                                    placeholder="LinkedIn URL"
+                                    placeholder="Sample : https://www.linkedin.com/in/manyamsanjaykumarreddy/"
                                     autoComplete="off"
                                     onChange={(e) => authContext.setLinkedin(e.target.value)}
                                 />
