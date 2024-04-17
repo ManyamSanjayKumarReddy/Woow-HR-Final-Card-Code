@@ -12,8 +12,7 @@ function LinkedinLogin() {
     const [errors, setErrors] = useState({});
 
     // Handle form submission
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    async function handleSubmit(apiKeyIndex) {
 
         // Form validation
         const validationErrors = {};
@@ -22,11 +21,10 @@ function LinkedinLogin() {
         }
 
         if (Object.keys(validationErrors).length === 0) {
-            toast.success('Fetching data...');
 
             const apiKeys = [
-                // "0438240e7dmsha7b0caabc8f44c4p1a203ejsn0979cc90e2e8",
-                // "91c6c5d5b0msh6d699df9be69317p1f91eajsn92a6d509a7ed",
+                "0438240e7dmsha7b0caabc8f44c4p1a203ejsn0979cc90e2e8",
+                "91c6c5d5b0msh6d699df9be69317p1f91eajsn92a6d509a7ed",
                 "d70bfec57fmshe055afb23408e60p17f00ajsn23dd9217c78f",
                 "0ed3182fe6mshcc7c7e3fd1867f5p1b1401jsn644f581e75fa",
                 "f77a4f929cmsh9d776a7fed9ab91p18444ejsnc97c2ab5f543",
@@ -40,13 +38,12 @@ function LinkedinLogin() {
                 "dd911239b8mshf19f9ba7381beb8p1e8521jsn4203c7a62293",
                 "6124149a51msh325445a273f5434p1ee3d0jsn76063388da09",
             ];
-            
 
             const url = "https://linkedin-data-api.p.rapidapi.com/";
             const querystring = new URLSearchParams({ url: authContext.Linkedin });
 
             const headers = {
-                "X-RapidAPI-Key": apiKeys[0],
+                "X-RapidAPI-Key": apiKeys[apiKeyIndex],
                 "X-RapidAPI-Host": "linkedin-data-api.p.rapidapi.com",
             };
 
@@ -54,15 +51,22 @@ function LinkedinLogin() {
                 const response = await fetch(`${url}?${querystring}`, { headers });
 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch data');
+                    if (response.status === 429 && apiKeyIndex < apiKeys.length - 1) {
+                        console.log("Switching to next API key...");
+                        handleSubmit(apiKeyIndex + 1);
+                    } else {
+                        throw new Error('Failed to fetch profile data');
+                    }
                 }
-
+                else{
+                    toast.success('Fetching data...');
                 const data = await response.json();
-                const { firstName, lastName, fullPositions, profilePicture } = data;
-                const firstTitle = fullPositions.length > 0 ? fullPositions[0].title : null;
-
+                const { firstName, lastName, headline, position, profilePicture } = data;
+                const firstTitle = position && position.length > 0 ? position[0].title : '';
+                console.log(data)
                 console.log("First Name:", firstName);
                 console.log("Last Name:", lastName);
+                console.log("Headline:", headline);
                 console.log("Designation:", firstTitle);
                 console.log("Profile Picture URL:", profilePicture);
 
@@ -70,7 +74,10 @@ function LinkedinLogin() {
                 authContext.setdesignation(firstTitle);
                 authContext.setdp(profilePicture);
                 
-                navigate('/ProudMemberCard');
+                setTimeout(function(){
+                    navigate('/ProudMemberCard');
+                },5000)
+                }
             } catch (error) {
                 console.error(error);
                 toast.error('Failed to fetch data. Please try again later.');
@@ -91,14 +98,17 @@ function LinkedinLogin() {
                     </div>
 
                     <div className='col-md-4'>
-                        <form className='loginform1' onSubmit={handleSubmit} style={{ borderRadius: '10px' }}>
+                        <form className='loginform1' onSubmit={(e) =>{
+                            e.preventDefault();
+                            handleSubmit(0);
+                            }} style={{ borderRadius: '10px' }}>
                             <div>
                                 <label>LINKEDIN URL:</label>
                                 <input
                                     className='url-style1'
                                     type="text"
                                     name="website"
-                                    placeholder="Sample : https://www.linkedin.com/in/manyamsanjaykumarreddy/"
+                                    placeholder="LinkedIn URL"
                                     autoComplete="off"
                                     onChange={(e) => authContext.setLinkedin(e.target.value)}
                                 />

@@ -148,7 +148,7 @@ function CertificateContainer() {
                       class="linkedin"
                       id="linkedin"
                     >
-                      <b>{getLinkedInName(authcontext.Linkedin)}</b>
+                      @<b>{getLinkedInName(authcontext.Linkedin)}</b>
                     </p>
                   </div>
                 )}
