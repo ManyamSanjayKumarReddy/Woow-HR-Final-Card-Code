@@ -67,7 +67,7 @@ function Login() {
     
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <h3 className='h1login'>Get Started with WoW HR</h3>
-                                <label>NAME:</label>
+                                <label>Name:</label>
                                 <input
                                     className='name-style'
                                     type="text"
@@ -83,7 +83,7 @@ function Login() {
 
                             
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <label>DESIGNATION:</label>
+                                <label>Designation:</label>
                                 <input
                                     className='designation-style'
                                     type="text"
@@ -98,7 +98,7 @@ function Login() {
                             </div>
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <label>UPLOAD IMAGE:</label>
+                                <label>Upload Image:</label>
                                 <input
                                     id="imageInput"
                                     type="file"

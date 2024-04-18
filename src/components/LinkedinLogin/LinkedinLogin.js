@@ -103,7 +103,7 @@ function LinkedinLogin() {
                             handleSubmit(0);
                             }} style={{ borderRadius: '10px' }}>
                             <div>
-                                <label>LINKEDIN URL:</label>
+                                <label>LinkedIn URL:</label>
                                 <input
                                     className='url-style1'
                                     type="text"
