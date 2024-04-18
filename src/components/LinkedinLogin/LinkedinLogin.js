@@ -120,7 +120,7 @@ function LinkedinLogin() {
                                 <p style={{ marginTop: '14px', marginBottom: '10px' }} className='pt-3'>
                                     If you don't have a LinkedIn account, please <Link to='/login'>Click here</Link>. Sample URL 👇
                                 </p>
-                                <p style={{ marginTop: '10px', marginBottom: '10px', color: "blue", fontSize: "14px" }} >
+                                <p style={{ marginTop: '10px', marginBottom: '10px', color: "blue", fontSize: "10px" }} >
                                     https://www.linkedin.com/in/manyamsanjaykumarreddy/
                                 </p>
                             </div>
