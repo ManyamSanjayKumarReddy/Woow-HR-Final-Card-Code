@@ -1,9 +1,13 @@
-.loginformcontainer{
+.loginformcontainer1{
   background: url('../../../public/images/Untitled design.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.logo_img {
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
 
 .card_design{
   margin-top:10rem;
@@ -38,7 +42,7 @@
 .card_design div span {
   color: #e74c3c;
   font-size: 14px;
-  margin: 5px;
+  margin-top: 5px;
   display: block;
 }
 
@@ -60,7 +64,7 @@
   transition:background-color 0.3s;
 }
 
-.card_design button:hover {
+.card_desig button:hover {
   background-color: #ffffff;
   color: #000b12;
 }
@@ -72,8 +76,8 @@
 
 .submit{
   color: #000000;
-  font-weight:800;
-  border-bottom:40px;
+  font-weight: 700;
+  border-bottom: 40px;
   border-radius: 5px;
 }
 
@@ -98,51 +102,36 @@
   background-color: #2bbee3;
 }
 
-@media (max-width:900px) {
-  .card_design{
-    margin:1rem;
-    margin-top:43em;
-    margin-bottom:5em;
-    font-size:15px; 
-    
+@media (max-width:962px) {
+  .loginformcontainer1{
+    background: url('../../../public/images/Untitled design.png');
+    background-size: 150%;
+    background-repeat: no-repeat;
   }
+    .card_design {
+    margin-top:37rem;
+    }
 }
 
-@media (max-width:800px) {
-  .card_design{
-    margin:1rem;
-    margin-top:40em;
-    margin-bottom:5em;
-    font-size:15px; 
-    
+@media (max-width:768px) {
+  .loginformcontainer1{
+    background: url('../../../public/images/Untitled design.png');
+    background-size: 150%;
+    background-repeat: no-repeat;
   }
+    .card_design {
+    margin-top:35rem;
+    }
 }
-@media (max-width:700px) {
-  .card_design{
-    margin:1rem;
-    margin-top:30em;
-    margin-bottom:5em;
-    font-size:15px; 
-    
-  }
-}
+
 
 @media (max-width:576px) {
-  .card_design{
-    margin:1rem;
-    margin-top:25em;
-    margin-bottom:5em;
-    font-size: 15px; 
-    
+  .loginformcontainer1{
+    background: url('../../../public/images/Untitled design.png');
+    background-size: 150%;
+    background-repeat: no-repeat;
   }
-}
-
-@media (max-width:476px) {
-  .card_design{
-    margin:1rem;
-    margin-top:20em;
-    margin-bottom:5em;
-    font-size: 15px; 
-    
-  }
+    .card_design {
+    margin-top:22rem;
+    }
 }

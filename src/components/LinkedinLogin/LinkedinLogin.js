@@ -93,16 +93,16 @@ function LinkedinLogin() {
             <ToastContainer />
             <div className='loginformcontainer1 container-fluid '>
                 <div className='row'>
-                    <div className='col-md-7'>
-                        <img src={logo} alt='Logo' className='logo_img col-6 col-md-4' />
+                    <div className='col-lg-6 col-md-4'>
+                        <img src={logo} alt='Logo' className='logo_img col-6 col-md-12 col-lg-4' />
                     </div>
 
-                    <div className='col-md-4'>
-                        <form className='loginform1' onSubmit={(e) =>{
+                    <div className='col-lg-5 col-md-10'>
+                        <form className='card_design container' onSubmit={(e) =>{
                             e.preventDefault();
                             handleSubmit(0);
                             }} style={{ borderRadius: '10px' }}>
-                            <div>
+                            <div data-mdb-input-init className="form-outline mb-4">
                                 <label>LinkedIn URL:</label>
                                 <input
                                     className='url-style1'
@@ -116,11 +116,13 @@ function LinkedinLogin() {
                             </div>
 
                             <div>
-                                <button className='submit1 mt-4' type="submit">Get Started</button>
-                                <p style={{ marginTop: '20px', marginBottom: '20px' }} className='pt-3'>
-                                    If you don't have a LinkedIn account, please <Link to='/login'>Click here</Link>.
+                                <button className='submit' type="submit">Get Started</button>
+                                <p style={{ marginTop: '14px', marginBottom: '10px' }} className='pt-3'>
+                                    If you don't have a LinkedIn account, please <Link to='/login'>Click here</Link>. Sample URL 👇
                                 </p>
-                                <p style={{ marginTop: '20px', marginBottom: '20px', color: "blue" }} className='pt-3'><b> Sample URL : https://www.linkedin.com/in/manyamsanjaykumarreddy/</b></p>
+                                <p style={{ marginTop: '10px', marginBottom: '10px', color: "blue", fontSize: "14px" }} >
+                                    https://www.linkedin.com/in/manyamsanjaykumarreddy/
+                                </p>
                             </div>
                         </form>
                     </div>
